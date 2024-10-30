@@ -1,9 +1,10 @@
-﻿
-using Atributos;
+﻿using Atributos;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System;
 using System.IO;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Negocio.Reporteria
 {
@@ -11,22 +12,18 @@ namespace Negocio.Reporteria
     {
         public void conectar_reporte(ref ReportDocument Reporte)
         {
+            // Leer la cadena de conexión desde web.config
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            var builder = new SqlConnectionStringBuilder(connectionString);
+
             TableLogOnInfo conn = new TableLogOnInfo();
             foreach (Table table in Reporte.Database.Tables)
             {
-                conn.ConnectionInfo.DatabaseName = "InventarioDB";
-                //-------------Credenciales Sergio-------------------
-                /*conn.ConnectionInfo.ServerName = "localhost";
-                conn.ConnectionInfo.UserID = "sergio";
-                conn.ConnectionInfo.Password = "admin123";*/
-                //-------------Credenciales Sebas--------------------
-                conn.ConnectionInfo.ServerName = "DESKTOP-7BKML4C\\SQLEXPRESS";
-                conn.ConnectionInfo.UserID = "sa";
-                conn.ConnectionInfo.Password = "sebas12345";
-                //-------------Credenciales Erick--------------------
-                /*conn.ConnectionInfo.ServerName = "DESKTOP-9JI62JQ\\SQLEXPRESS";
-                conn.ConnectionInfo.UserID = "ejimenez";
-                conn.ConnectionInfo.Password = "12345";*/
+                conn.ConnectionInfo.ServerName = builder.DataSource;
+                conn.ConnectionInfo.DatabaseName = builder.InitialCatalog;
+                conn.ConnectionInfo.UserID = builder.UserID;
+                conn.ConnectionInfo.Password = builder.Password;
+
                 table.ApplyLogOnInfo(conn);
             }
         }
