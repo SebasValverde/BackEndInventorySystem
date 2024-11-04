@@ -1,7 +1,7 @@
-# **Proyecto de Back-End - [Nombre del Proyecto]**
+# **Proyecto de Back-End - [InventorySystem]**
 
 ### Descripción
-Breve descripción del proyecto: qué resuelve o su propósito principal. Ejemplo: "Este proyecto es un sistema de inventario diseñado para gestionar productos perecederos de manera eficiente, permitiendo controlar inventario, pedidos, clientes, proveedores y empleados."
+Back-end de un sistema de inventario desarrollado en arquitectura por n capas diseñado para gestionar productos perecederos de manera eficiente, permitiendo controlar productos,inventarios por sede, pedidos, clientes, proveedores y empleados. El sistema esta enfocado en las buenas practicas de programacion y en el manejo de errores en diferentes capas para una mejor proteccion de datos, ademas, se utilizo stored procedures para realizar las consultas necesarias y mandar los resultados a las capas superiores. El sistema tiene la capacidad de realizar reportes de productos, inventario, pedidos y demas.
 
 ---
 
@@ -11,7 +11,6 @@ Breve descripción del proyecto: qué resuelve o su propósito principal. Ejempl
 2. [Arquitectura](#arquitectura)
 3. [Instalación y Configuración](#instalación-y-configuración)
 4. [Funcionalidades Principales](#funcionalidades-principales)
-5. [Estructura de Carpetas](#estructura-de-carpetas)
 
 ---
 
@@ -22,10 +21,11 @@ Lista de las tecnologías y herramientas usadas:
 - **Lenguaje:** C#
 - **Framework:** .NET Framework 4.8
 - **Base de Datos:** SQL Server
+- **Front-end:** React
 - **ORM / Acceso a Datos:** ADO.NET y procedimientos almacenados
 - **Herramientas de Configuración:** `System.Configuration` para la conexión a base de datos
 - **Control de Versiones:** Git y GitHub
-- **Otros:** Herramientas específicas como Crystal Reports, o librerías adicionales.
+- **Otros:** Crystal Reports para la creacion de reportes.
 
 ---
 
@@ -36,10 +36,11 @@ Describe la arquitectura del proyecto, destacando el diseño modular, el uso de 
 ### Diseño en Capas
 
 - **Capa de Presentación (Opcional):** Si tienes una API de prueba o documentación interactiva.
-- **Capa de Negocio:** Lógica del negocio, validación de datos y manipulación de datos antes de interactuar con la base de datos.
-- **Capa de Datos:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
-- **Modelo de Datos:** Representación de entidades de base de datos mediante clases C#.
 - **Controladores de API:** Endpoints expuestos por la API para acceder a las funcionalidades.
+- **Capa de Negocio:** Lógica del negocio, validación de datos y manipulación de datos antes de interactuar con la base de datos.
+- **Capa de Atributos:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
+- **Capa de DataAccess:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
+- **Modelo de Datos:** Representación de entidades de base de datos mediante clases C#.
 
 ### Diagrama de Arquitectura
 
@@ -75,12 +76,4 @@ Lista de las funcionalidades principales que ofrece tu back-end:
 - Control de inventario con actualización en tiempo real.
 - Reportes generados con Crystal Reports.
 
-## Estructura de Carpetas
 
-/NombreDelProyecto
-│
-├── /Controllers         # Controladores de la API
-├── /Models              # Modelos de datos
-├── /Data                # Acceso a la base de datos y conexión
-├── /BusinessLogic       # Lógica de negocio
-└── /Reports             # Configuración y plantillas de reportes
