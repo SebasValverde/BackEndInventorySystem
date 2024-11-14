@@ -35,16 +35,17 @@ Describe la arquitectura del proyecto, destacando el diseño modular, el uso de 
 
 ### Diseño en Capas
 
-- **Capa de Presentación (Opcional):** Si tienes una API de prueba o documentación interactiva.
-- **Controladores de API:** Endpoints expuestos por la API para acceder a las funcionalidades.
+- **Capa de Presentación:** Si tienes una API de prueba o documentación interactiva.
+- **Controladores de API:** Endpoints de la API para acceder a los metodos que traen informacion.
 - **Capa de Negocio:** Lógica del negocio, validación de datos y manipulación de datos antes de interactuar con la base de datos.
 - **Capa de Atributos:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
 - **Capa de DataAccess:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
 - **Modelo de Datos:** Representación de entidades de base de datos mediante clases C#.
 
-### Diagrama de Arquitectura
+### Diagrama de la Base de Datos
 
-(Opcional) Inserta un diagrama o esquema si tienes uno para representar visualmente la arquitectura de tu back-end.
+![Diagrama](https://github.com/user-attachments/assets/9544baad-5ab6-4156-861c-7d6ca717d4ce)
+
 
 ---
 
