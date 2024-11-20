@@ -34,7 +34,7 @@ Lista de las tecnologías y herramientas usadas:
 - **Capa de Presentación:** Contiene la interfaz gráfica del usuario y consume los endpoints de la API, el front end esta desarrollado en react y recibe los datos desde aqui. Puedes encontrar el repositorio del front-end [aquí](https://github.com/tu-usuario/nombre-del-repositorio-front).
 - **Controladores de API:** Endpoints de la API para acceder a los metodos que traen informacion.
 - **Capa de Negocio:** En esta capa se realiza la validacion de datos y manejo de erorres antes de mandarlos a las diferents capas, aqui se busca detectar si un usario ingreso mal un dato y en caso tal de que fuera asi, muestra un mensaje personalizado
-- **Capa de Atributos:** En esta capa se inicializan los atributos de los objetos, los objetos a utilizar en el back-end son: Cliente, Detalle Peiddo, Empleado, Inventario, Mensaje Respuesta, Pedido, Producto, Proveedor, Sucursal, Tipo Empleado y Tipo Producto
+- **Capa de Atributos:** En esta capa se inicializan los atributos de los objetos, los objetos a utilizar en el back-end son: Cliente, Detalle Pedido, Empleado, Inventario, Pedido, Mensaje Respuesta, Producto, Proveedor, Sucursal, Tipo Empleado y Tipo Producto.
 - **Capa de DataAccess:** Capa encargada de realizar la conexion a la base de datos de SQL Server Management Studio.
 - **Modelo de Datos:** Base de Datos y procedimientos almacenados manejados en SQL Server Management Studio.
 
@@ -67,10 +67,11 @@ Pasos para instalar y configurar el proyecto localmente.
      ```
 ## Funcionalidades Principales
 
-Lista de las funcionalidades principales que ofrece tu back-end:
+Funcionalidades principales del back-end:
 
-- CRUD de productos, clientes, proveedores y empleados.
-- Control de inventario con actualización en tiempo real.
+- Gestion de productos,sucursales, clientes, proveedores, empleados y pedidos.
+- Generacion de pedidos para un cliente y la creacion de reporte de los pedidos.
+- Control de inventario con actualización en tiempo real y reportes del mismo.
 - Reportes generados con Crystal Reports.
 
 
