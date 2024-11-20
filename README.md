@@ -1,7 +1,7 @@
 # **Proyecto de Back-End - [InventorySystem]**
 
 ### Descripción
-Back-end de un sistema de inventario desarrollado en arquitectura por n capas diseñado para gestionar productos perecederos de manera eficiente, permitiendo controlar productos,inventarios por sede, pedidos, clientes, proveedores y empleados. El sistema esta enfocado en las buenas practicas de programacion y en el manejo de errores en diferentes capas para una mejor proteccion de datos, ademas, se utilizo stored procedures para realizar las consultas necesarias y mandar los resultados a las capas superiores. El sistema tiene la capacidad de realizar reportes de productos, inventario, pedidos y demas.
+Back-end de un sistema de inventario desarrollado en arquitectura por n capas diseñado para gestionar productos perecederos de manera eficiente, permitiendo controlar productos,inventarios por sede, pedidos, clientes, proveedores y empleados. El sistema esta enfocado en las buenas practicas de programacion y en el manejo de errores en diferentes capas para una mejor proteccion de datos, ademas, se utilizo stored procedures para realizar las consultas necesarias y mandar los resultados a las capas superiores. El sistema tiene la capacidad de realizar reportes de productos, inventario, gestion de empleados para tomar ordenes, pedidos y demas.
 
 ---
 
@@ -24,23 +24,19 @@ Lista de las tecnologías y herramientas usadas:
 - **Front-end:** React
 - **ORM / Acceso a Datos:** ADO.NET y procedimientos almacenados
 - **Herramientas de Configuración:** `System.Configuration` para la conexión a base de datos
-- **Control de Versiones:** Git y GitHub
 - **Otros:** Crystal Reports para la creacion de reportes.
 
 ---
 
 ## **Arquitectura**
-
-Describe la arquitectura del proyecto, destacando el diseño modular, el uso de capas, etc. Aquí tienes un ejemplo para un diseño en capas:
-
 ### Diseño en Capas
 
-- **Capa de Presentación:** Si tienes una API de prueba o documentación interactiva.
+- **Capa de Presentación:** Contiene la interfaz gráfica del usuario y consume los endpoints de la API, el front end esta desarrollado en react y recibe los datos desde aqui. Puedes encontrar el repositorio del front-end [aquí](https://github.com/tu-usuario/nombre-del-repositorio-front).
 - **Controladores de API:** Endpoints de la API para acceder a los metodos que traen informacion.
-- **Capa de Negocio:** Lógica del negocio, validación de datos y manipulación de datos antes de interactuar con la base de datos.
-- **Capa de Atributos:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
-- **Capa de DataAccess:** Conexión y acceso a la base de datos mediante ADO.NET y procedimientos almacenados.
-- **Modelo de Datos:** Representación de entidades de base de datos mediante clases C#.
+- **Capa de Negocio:** En esta capa se realiza la validacion de datos y manejo de erorres antes de mandarlos a las diferents capas, aqui se busca detectar si un usario ingreso mal un dato y en caso tal de que fuera asi, muestra un mensaje personalizado
+- **Capa de Atributos:** En esta capa se inicializan los atributos de los objetos, los objetos a utilizar en el back-end son: Cliente, Detalle Peiddo, Empleado, Inventario, Mensaje Respuesta, Pedido, Producto, Proveedor, Sucursal, Tipo Empleado y Tipo Producto
+- **Capa de DataAccess:** Capa encargada de realizar la conexion a la base de datos de SQL Server Management Studio.
+- **Modelo de Datos:** Base de Datos y procedimientos almacenados manejados en SQL Server Management Studio.
 
 ### Diagrama de la Base de Datos
 
