@@ -50,8 +50,8 @@ Steps to install and set up the project locally.
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/repository-name-backend.git
-   cd repository-name-backend
+   git clone https://github.com/SebasValverde/BackEndInventorySystem.git
+   cd BackEndInventorySystem
    ```
 2. **Database Configuration:**
 
