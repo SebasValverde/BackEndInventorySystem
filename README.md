@@ -9,8 +9,8 @@ This is the back-end of an inventory management system developed using a multi-l
 
 1. [Technologies Used](#Technologies-Used)
 2. [Architecture](#Architecture)
-3. [Instalación y Configuración](#instalación-y-configuración)
-4. [Funcionalidades Principales](#funcionalidades-principales)
+3. [Installation and Configuration](#Installation-and-Configuration)
+4. [Main Features](#Main-Features)
 
 ---
 
@@ -44,33 +44,33 @@ A list of the technologies and tools utilized:
 
 ---
 
-## **Instalación y Configuración**
+## **Installation and Configuration**
 
-Pasos para instalar y configurar el proyecto localmente.
+Steps to install and set up the project locally.
 
-1. **Clonar el Repositorio:**
+1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio-backend.git
-   cd nombre-del-repositorio-backend
+   git clone https://github.com/your-username/repository-name-backend.git
+   cd repository-name-backend
    ```
-2. **Configuración de la Base de Datos:**
+2. **Database Configuration:**
 
-   - Asegúrate de tener SQL Server instalado y de que los procedimientos almacenados y tablas estén creados en tu base de datos.
-   - Configura la cadena de conexión en el archivo `web.config` (.NET Framework) para que coincida con tu servidor y base de datos local.
+   - Ensure SQL Server is installed and that stored procedures and tables are created in your database.
+   - Configure the connection string in the web.config file (.NET Framework) to match your local server and database.
      ```xml
      <connectionStrings>
          <add name="DefaultConnection" 
-              connectionString="Data Source=TU_SERVIDOR;Initial Catalog=TU_BASE_DE_DATOS;User ID=USUARIO;Password=CONTRASEÑA"
+              connectionString="Data Source=YOUR_SERVER;Initial Catalog=YOUR_DATABASE;User ID=USERNAME;Password=PASSWORD"
               providerName="System.Data.SqlClient" />
      </connectionStrings>
      ```
-## Funcionalidades Principales
+## **Main Features**
 
-Funcionalidades principales del back-end:
+Key functionalities of the back-end:
 
-- Gestion de productos,sucursales, clientes, proveedores, empleados y pedidos.
-- Generacion de pedidos para un cliente y la creacion de reporte de los pedidos.
-- Control de inventario con actualización en tiempo real y reportes del mismo.
-- Reportes generados con Crystal Reports.
+- Management of products, branches, clients, suppliers, employees, and orders.
+- Order generation for clients with the ability to create detailed reports for each order.
+- Real-time inventory management with reporting capabilities.
+- Reports generated using Crystal Reports.
 
 
