@@ -31,7 +31,7 @@ A list of the technologies and tools utilized:
 ## **Architecture**
 ### Layered Design
 
-- **Presentation Layer:** Contains the user interface and consumes the API endpoints. The front-end is developed in React and receives data from this layer. You can find the front-end repository [here](https://github.com/your-username/front-repo-name).
+- **Presentation Layer:** Contains the user interface and consumes the API endpoints. The front-end is developed in React and receives data from this layer. You can find the front-end repository [here](https://github.com/SebasValverde/FrontEndInventorySystem.git).
 - **API Controllers:** API endpoints for accessing methods that retrieve information.
 - **Business Layer:** Handles data validation and error management before passing data to other layers. This layer ensures that if a user inputs incorrect data, a personalized error message is displayed.
 - **Attributes Layer:** Initializes the attributes of the objects. The objects used in the back-end are: Client, Order Detail, Employee, Inventory, Order, Response Message, Product, Supplier, Branch, Employee Type, and Product Type.
